@@ -18,19 +18,29 @@ module.exports = ({ env }) => ({
       // },
     },
   },
-
+  // graphql: {
+  //   enabled: true,
+  //   config: {
+  //     endpoint: "/graphql",
+  //     shadowCRUD: true,
+  //     playgroundAlways: true,
+  //     defaultLimit: 10,
+  //     maxLimit: 20,
+  //     apolloServer: {
+  //       tracing: false,
+  //     },
+  //   },
+  // },
   // use graphql on Railway.app
   graphql: {
-    config: {
-      endpoint: "/graphql",
-      shadowCRUD: true,
-      playgroundAlways: true,
-      depthLimit: 100,
-      amountLimit: 100,
-      apolloServer: {
-        tracing: false,
-        introspection: true,
-      },
+    endpoint: "/graphql",
+    shadowCRUD: true,
+    playgroundAlways: true,
+    depthLimit: 100,
+    amountLimit: 100,
+    apolloServer: {
+      tracing: false,
+      introspection: true,
     },
   },
 });
